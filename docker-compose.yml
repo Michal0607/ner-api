@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  ner_api-sim:
+    container_name: ner_api_sim
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
