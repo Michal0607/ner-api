@@ -19,9 +19,9 @@ async def analyze_text(text: str):
         return {
             "input_text": text,
             "ner_results": ner_results,
-            "dates": dates,
-            "times": times,
-            "pesels": pesels,
+            "DATE": dates,
+            "TIME": times,
+            "PESEL": pesels,
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Internal Server Error: {str(e)}")
