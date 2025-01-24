@@ -5,9 +5,10 @@ NER API is a FastAPI application that analyzes text to detect key information su
 ## Project Structure
 
 ```
-ner_api_sim/
+ner_api/
 │-- app/
 │   │-- data/
+|   |   │-- time_words.json
 │   │-- models/
 │   │   │-- ner_model.py
 │   │-- utils/
