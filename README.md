@@ -82,6 +82,3 @@ Available endpoint:
 - Transformers (Herbert Base NER model)
 - PyTorch
 - Docker
-
-## Author
-Project developed by [Your Name].
