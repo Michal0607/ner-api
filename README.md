@@ -1,6 +1,6 @@
 # NER API
 
-NER API is a FastAPI application that analyzes text to detect key information such as dates, times, and PESEL numbers. It leverages a machine learning model to recognize named entities such as persons, locations, and organizations, while dates, times, and PESEL numbers are detected using regular expressions.
+NER API is a FastAPI application that analyzes text to detect key information such as dates, times, PESEL numbers and phone numbers. It leverages a machine learning model to recognize named entities such as persons, locations, and organizations, while dates, times, and PESEL numbers are detected using regular expressions.
 
 ## Project Structure
 
