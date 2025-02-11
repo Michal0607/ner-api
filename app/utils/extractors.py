@@ -98,7 +98,7 @@ def extract_phone_with_positions(text: str):
             results.append({
                 "phone": original_fragment,
                 "start": match.start(),
-                "stop": match.end()
+                "end": match.end()
             })
 
     pattern_complex = r"[a-z0-9\-\sąćęłńóśźż:\(\)\.,_/]{5,200}"
@@ -114,7 +114,7 @@ def extract_phone_with_positions(text: str):
                 results.append({
                     "phone": original_fragment,
                     "start": match.start(),
-                    "stop": match.end()
+                    "end": match.end()
                 })
 
     return results
@@ -148,7 +148,7 @@ def extract_dates_with_positions(text: str):
             results.append({
                 "date": fragment,
                 "start": match.start(),
-                "stop": match.end()
+                "end": match.end()
             })
 
     extra_pattern = r"\b(\S+)\s+(\S+)\s+(\d{4})\b"
@@ -170,7 +170,7 @@ def extract_dates_with_positions(text: str):
                 results.append({
                     "date": original_fragment,
                     "start": match.start(),
-                    "stop": match.end()
+                    "end": match.end()
                 })
 
     return results
@@ -194,7 +194,7 @@ def extract_pesel_with_positions(text: str):
             results.append({
                 "pesel": candidate,
                 "start": match.start(),
-                "stop": match.end()
+                "end": match.end()
             })
 
     pattern_complex = r"[a-z0-9\-\sąćęłńóśźż:\(\)\.,_/]{10,200}"
@@ -210,7 +210,7 @@ def extract_pesel_with_positions(text: str):
                 results.append({
                     "pesel": candidate,
                     "start": match.start(),
-                    "stop": match.end()
+                    "end": match.end()
                 })
     return results
 
@@ -298,7 +298,7 @@ def extract_time(text: str):
                         "time": f"{hour:02d}:{minute:02d}",
                         "original": match.group(0),
                         "start": match.start(),
-                        "stop": match.end(),
+                        "end": match.end(),
                     })
 
     time_pattern_numeric = r"""
@@ -314,6 +314,6 @@ def extract_time(text: str):
         results.append({
             "time": match.group(0),
             "start": match.start(),
-            "stop": match.end(),
+            "end": match.end(),
         })
     return results
